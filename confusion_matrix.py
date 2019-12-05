@@ -28,12 +28,12 @@ def plot_confusion_matrix(y_true, y_pred, classes, normalize=False, title=None, 
     print(cm)
 
     fig, ax = plt.subplots()
-    im = ax.imshow(cm, interpolation="nearest", cmap=cmap)
+    im = ax.imshow(cm, interpolation="nearest", cmap=cmap, aspect="equal")
     ax.figure.colorbar(im, ax=ax)
     # We want to show all ticks...
     ax.set(
-        xticks=np.arange(cm.shape[1]),
-        yticks=np.arange(cm.shape[0]),
+        xticks=np.arange(cm.shape[1], 0.5),
+        yticks=np.arange(cm.shape[0], 0.5),
         # ... and label them with the respective list entries
         xticklabels=classes,
         yticklabels=classes,
