@@ -1,2 +1,3 @@
 *sublime*
 *.pyc
+.ipynb_checkpoints
